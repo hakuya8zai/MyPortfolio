@@ -1,7 +1,7 @@
 <template>
-    <footer class="bg-dark text-bg-dark text-center text-lg-start">
+    <footer class="bg-dark text-bg-dark text-center text-lg-start border-top border-1 border-white">
         <div class="row">
-            <div class=" col-12 text-center p-0 text-secondary">
+            <div class=" col-12 text-center p-0 text-secondary font-sm">
                 interested in working together?
             </div>   
         </div>
@@ -13,7 +13,7 @@
             </div> 
         </div>
         <div class="row">
-            <div class=" col-12 text-center p-0 text-secondary">
+            <div class=" col-12 text-center p-0 text-secondary font-sm">
                 Copyright @2023 FrankChung. All Rights Reserved.
             </div>   
         </div>
@@ -26,4 +26,6 @@
         padding-top:8px;
         padding-bottom:8px;
     }
+    .font-sm{
+        font-size: 14px;}
   </style>
