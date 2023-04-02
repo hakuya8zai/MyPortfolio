@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-dark text-bg-dark mb-0">
+    <div class="bg-black text-bg-dark mb-0">
         <section class="banner">
             <div class="row">
                 <div class="col-7">

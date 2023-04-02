@@ -1,5 +1,5 @@
 <template>
-    <footer class="bg-dark text-bg-dark text-center text-lg-start border-top border-1 border-white">
+    <footer class="bg-black text-bg-black text-center text-lg-start border-top border-1 border-white">
         <div class="row">
             <div class=" col-12 text-center p-0 text-secondary font-sm">
                 interested in working together?
@@ -25,6 +25,7 @@
     footer{
         padding-top:8px;
         padding-bottom:8px;
+        box-shadow: 0px 0px 5px white;
     }
     .font-sm{
         font-size: 14px;}
