@@ -4,26 +4,26 @@
         <a class="navbar-brand" href="#">
             <img src="../assets/Frank_logo.svg" alt="">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        <button @click="menuToggle" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <div class="line1"></div>
           <div class="line2"></div>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
+            <li class="nav-item ms-auto me-auto">
               <router-link to="/about" class="nav-link nlink-style ps-3 pe-3">About</router-link>
             </li>
-            <li class="nav-item">
+            <li class="nav-item ms-auto me-auto">
               <router-link to="/portfolio" class="nav-link nlink-style ps-3 pe-3">Work</router-link>
             </li>
-            <li class="nav-item">
+            <li class="nav-item ms-auto me-auto">
               <router-link to="/" class="nav-link nlink-style ps-3 pe-3">Resume</router-link>
             </li>
-            <li class="nav-item">
+            <li class="nav-item ms-auto me-auto">
               <router-link to="/" class="nav-link nlink-style ps-3 pe-3">Medium</router-link>
             </li>
-            <li class="nav-item">
+            <li class="nav-item ms-auto me-auto">
               <router-link to="/archive" class="nav-link nlink-style ps-3 pe-3">Archive</router-link>
             </li>
 
@@ -34,7 +34,12 @@
 </template>
 
 <script setup>
-    
+    function menuToggle(){
+        const line1 = document.querySelector('.line1');
+        const line2 = document.querySelector('.line2');
+        line1.classList.toggle('open');
+        line2.classList.toggle('open');
+    }
 </script>
 
 <style scoped>
@@ -59,8 +64,9 @@
 
     .navbar-toggler {
     border: none;
-    outline: none;
+    box-shadow: none !important;
     }
+
     .line1,.line2{
         height: 4px;
         width: 50px;
@@ -71,39 +77,89 @@
         border-radius:0px;
 
     }
-    .line1 {
-        animation: open-line1-rev 0.5s ease-in-out;
+    .collapsed .line1 {
+        animation: collapse-line1 0.5s ease-in-out;
+        animation-fill-mode:backwards;
     }
-    .line2 {
-        animation: open-line2-rev 0.5s ease-in-out;
+    .collapsed .line2 {
+        animation: collapse-line2 0.5s ease-in-out;
+        animation-fill-mode:backwards;
     }
-    .line1 .open{
-        animation: open-line1-rev 0.5s ease-in-out;
+    .line1.open{
+        animation: open-line1 0.5s ease-in-out;
+        animation-fill-mode:forwards;
     }
-    .line2 .open{
-        animation: open-line1-rev 0.5s ease-in-out;
+    .line2.open{
+        animation: open-line2 0.5s ease-in-out;
+        animation-fill-mode:forwards;
     }
 
     @keyframes open-line1{
         0%{
-            transform:translate3d(0,0,0) rotate(0deg);
+            transform:rotate(0deg);
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
         50%{
-            transform:translate3d(0,-10,0) rotate(0deg);
+            transform:rotate(0deg);
+            margin-top: 0px;
+            margin-bottom: -4px;
         }
         100%{
-            transform:translate3d(0,-10,0) rotate(45deg);
+            transform:rotate(45deg);
+            margin-top: 0px;
+            margin-bottom:-4px;
         }
     }
     @keyframes open-line2{
         0%{
-            transform:translate3d(0,0,0) rotate(0deg);
+            transform:rotate(0deg);
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
         50%{
-            transform:translate3d(0,10,0) rotate(0deg);
+            transform:rotate(0deg);
+            margin-top: -4px;
+            margin-bottom: 0px;
         }
         100%{
-            transform:translate3d(0,10,0) rotate(-45deg);
+            transform:rotate(-45deg);
+            margin-top: -4px;
+            margin-bottom:0px;
+        }
+    }
+    @keyframes collapse-line1{
+        100%{
+            transform:rotate(0deg);
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        50%{
+            transform:rotate(0deg);
+            margin-top: 0px;
+            margin-bottom:-4px;
+        }
+        0%{
+            transform:rotate(45deg);
+            margin-top: 0px;
+            margin-bottom:-4px;
+        }
+    }
+    @keyframes collapse-line2{
+        100%{
+            transform:rotate(0deg);
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        50%{
+            transform:rotate(0deg);
+            margin-top: -4px;
+            margin-bottom:0px;
+        }
+        0%{
+            transform:rotate(-45deg);
+            margin-top: -4px;
+            margin-bottom:0px;
         }
     }
 
