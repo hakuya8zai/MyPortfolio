@@ -7,9 +7,9 @@
         </div>
         <div class="row">
             <div class=" col-12 text-center ps-3">
-                    <a class="pe-3 link-light text-decoration-none" href="#">linkedin -></a>
+                    <a class="underlink pe-3 text-decoration-none hover-underline" href="https://www.linkedin.com/in/hui-kai-chung-970ab6140/">linkedin -></a>
                     <!-- to do : 點擊後複製 -->
-                    <a class="ps-3 link-light text-decoration-none" href="#">hakuya8zai@gmail.com</a> 
+                    <a class="underlink ps-3 text-decoration-none hover-underline" href="#">hakuya8zai@gmail.com</a> 
             </div> 
         </div>
         <div class="row">
@@ -28,5 +28,15 @@
         box-shadow: 0px 0px 5px white;
     }
     .font-sm{
-        font-size: 14px;}
+        font-size: 14px;
+    }
+    .underlink{
+        color: white;
+    }
+    .hover-underline:hover {
+    display: inline-block;
+    position: relative;
+    color: #feaa34;
+    }
+
   </style>

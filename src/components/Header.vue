@@ -171,6 +171,7 @@
     display: inline-block;
     position: relative;
     color: #feaa34;
+    cursor: pointer;
     }
 
     .hover-underline-animation::after {
