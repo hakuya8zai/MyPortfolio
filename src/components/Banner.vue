@@ -7,7 +7,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="offset-lg-1 col-auto">
+                <div class="ms-lg-5 col-auto">
                     <p class="banner-words blur">Hi, I'm Frank Chung.</p>
                 </div>
             </div>
@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="row justify-content-lg-end">
-                <div class="col-auto">
+                <div class="col-auto me-2">
                     <p class="banner-words blur delete-decoration">Product Manager</p>
                 </div>
             </div>
