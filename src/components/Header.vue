@@ -184,7 +184,7 @@
     left: 15%;
     background-color: #feaa34;
     transform-origin: bottom;
-    transition: transform 0.25s ease-out;
+    transition: transform 0.25s ease-in-out;
     }
 
     .hover-underline-animation:hover::after {
