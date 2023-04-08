@@ -1,14 +1,14 @@
 <script setup>
+// import { RouterLink, RouterView } from 'vue-router'
+
 import Header from './components/Header.vue'
-import Banner from './components/Banner.vue'
 import Footer from './components/Footer.vue'
-import MainProject from './components/MainProject.vue'
+
 </script>
 
 <template>
   <Header />
-  <Banner />
-  <MainProject />
+  <router-view></router-view>
   <Footer />
 </template>
 

@@ -1,9 +1,9 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-black bg-black border-bottom border-1 border-white">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <router-link to="/Home" class="navbar-brand">
             <img src="../assets/Frank_logo.svg" alt="">
-        </a>
+        </router-link>
         <button @click="menuToggle" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <div class="line1"></div>
@@ -12,16 +12,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item ms-auto me-auto">
-              <router-link to="/about" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">About</router-link>
+              <router-link to="/About" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">About</router-link>
             </li>
             <li class="nav-item ms-auto me-auto">
-              <router-link to="/portfolio" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">Work</router-link>
+              <router-link to="/Portfolio" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">Work</router-link>
             </li>
             <li class="nav-item ms-auto me-auto">
               <router-link to="/" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">Resume</router-link>
             </li>
             <li class="nav-item ms-auto me-auto">
-              <router-link to="/" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">Medium</router-link>
+              <a href="https://medium.com/@huikaichung1999" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">Medium</a>
             </li>
             <li class="nav-item ms-auto me-auto">
               <router-link to="/archive" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">Archive</router-link>
