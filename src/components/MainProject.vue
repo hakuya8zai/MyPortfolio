@@ -72,6 +72,7 @@
     .card-img-overlay{
         background-color: black;
         opacity: 0;
+        /* 下面這行讓文字往中間對齊 */
         padding-top: 15%;
         transition: opacity 0.25s ease-out;
 
