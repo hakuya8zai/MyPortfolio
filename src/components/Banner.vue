@@ -26,10 +26,12 @@
                     <p class="banner-words blur delete-decoration">Product Manager</p>
                 </div>
             </div>
-            <div class="row mt-5">
-                <div class="col-auto mb-3">
-                        <button class="btn btn-outline-warning btn-lg me-3">More Frank</button>
-                        <button class="btn btn-outline-light btn-lg">Resume</button>
+            <div class="row mt-5 mb-3">
+                <div class="col-3 d-grid">
+                    <button class="btn btn-outline-warning btn-lg">More Frank</button>
+                </div>
+                <div class="col-3 d-grid">
+                    <button class="btn btn-outline-light btn-lg">Resume</button>
                 </div>
             </div>
         </section>
@@ -48,6 +50,6 @@
         text-decoration: line-through;
     }
     button{
-        border-radius: 5px;
+        border-radius: 0px;
     }
 </style>

@@ -4,7 +4,6 @@
 </script>
 
 <template>
-    <div>hello</div>
     <Banner />
     <MainProject />
 </template>
