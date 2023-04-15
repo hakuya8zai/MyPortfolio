@@ -1,7 +1,7 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-black bg-black border-bottom border-1 border-white">
+    <nav class="navbar navbar-expand-lg navbar-black bg-black border-bottom border-1 border-white fixed-top">
       <div class="container-fluid">
-        <router-link to="/Home" class="navbar-brand">
+        <router-link to="/MyPortfolio" class="navbar-brand">
             <img src="../assets/Frank_logo.svg" alt="">
         </router-link>
         <button @click="menuToggle" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -10,23 +10,24 @@
           <div class="line2"></div>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item ms-auto me-auto">
-              <router-link to="/About" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">About</router-link>
+          <ul class="navbar-nav ms-lg-auto">
+            <li class="nav-item bt-border text-center ms-lg-auto">
+              <router-link to="/MyPortfolio/About" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">About</router-link>
             </li>
-            <li class="nav-item ms-auto me-auto">
-              <router-link to="/Portfolio" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">Work</router-link>
+            <li class="nav-item bt-border text-center ms-lg-auto">
+              <router-link to="/MyPortfolio/Works" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">Works</router-link>
             </li>
-            <li class="nav-item ms-auto me-auto">
-              <router-link to="/" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">Resume</router-link>
+            <li class="nav-item bt-border text-center ms-lg-auto">
+              <router-link to="/Resume" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">Resume</router-link>
             </li>
-            <li class="nav-item ms-auto me-auto">
+            <li class="nav-item text-center ms-lg-auto">
               <a href="https://medium.com/@huikaichung1999" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">Medium</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+    <div class="m-5"></div>
 </template>
 
 <script setup>
@@ -43,12 +44,6 @@
       box-shadow: 0px 0px 5px white;
       position:fixed-top;
     }
-    .nlink-style{
-        color: white;
-        font-size: 16px;
-        padding-top: 0;
-        padding-bottom: 0;
-    }
 
     .navbar-toggler-icon {
     /* background-image: none; */
@@ -62,6 +57,28 @@
     border: none;
     box-shadow: none !important;
     }
+
+    /* header item 在 navbar lg 以下的不同樣式 */
+    @media screen and (max-width: 991px) {
+        .bt-border{
+            border-bottom:2px solid white;
+        }
+        .nlink-style{
+            color: white;
+            font-size: 20px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }  
+    }
+    @media screen and (min-width: 992px) {
+        .nlink-style{
+            color: white;
+            font-size: 16px;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+
 
     .line1,.line2{
         height: 4px;
