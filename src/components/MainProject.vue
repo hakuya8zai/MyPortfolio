@@ -1,7 +1,7 @@
 <template>
     <div class="bg-black text-bg-black container-fluid">
         <div class="project-group top-0 row g-0 justify-content-center pb-5">
-            <div class="col-lg-10 col-md-8 col-12">
+            <div class="col-md-10 col-12">
                 <div class="row row-cols-lg-2 row-cols-1 card-deck justify-content-center justify-content-lg-between">
                     <div class="col pt-2 pb-2">
                         <div class="card bg-light text-center">

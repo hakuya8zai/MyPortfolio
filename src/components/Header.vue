@@ -23,10 +23,6 @@
             <li class="nav-item ms-auto me-auto">
               <a href="https://medium.com/@huikaichung1999" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">Medium</a>
             </li>
-            <li class="nav-item ms-auto me-auto">
-              <router-link to="/archive" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">Archive</router-link>
-            </li>
-
           </ul>
         </div>
       </div>
