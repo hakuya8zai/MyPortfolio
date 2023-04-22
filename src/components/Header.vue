@@ -15,7 +15,7 @@
               <router-link to="/MyPortfolio/About" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">About</router-link>
             </li>
             <li class="nav-item bt-border text-center ms-lg-auto">
-              <router-link to="/MyPortfolio/Works" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">Works</router-link>
+              <router-link to="/MyPortfolio/Work" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">Work</router-link>
             </li>
             <li class="nav-item bt-border text-center ms-lg-auto">
               <router-link to="/Resume" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">Resume</router-link>
@@ -73,7 +73,7 @@
     @media screen and (min-width: 992px) {
         .nlink-style{
             color: white;
-            font-size: 16px;
+            font-size: 0.8rem;
             padding-top: 0;
             padding-bottom: 0;
         }
