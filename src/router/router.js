@@ -21,6 +21,11 @@ const routes = [
     name: "NotFound",
     component: () => import("../views/404.vue"),
   },
+  {
+    path: "/MyPortfolio/backstage/workwall",
+    name: "workwall",
+    component: () => import("../views/WorkBS.vue"),
+  },
 ];
 
 export default routes;

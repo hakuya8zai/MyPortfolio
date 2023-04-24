@@ -4,8 +4,8 @@
             interested in working together?
         </div>   
         <div class="text-center">
-            <a class="underlink m-2 fs-5 text-decoration-none hover-underline" href="https://www.linkedin.com/in/hui-kai-chung-970ab6140/">-> linkedin</a>
-            <a class="underlink m-2 fs-5 text-decoration-none hover-underline" href="https://medium.com/@huikaichung1999">-> Medium</a>
+            <a class="underlink m-2 fs-7 text-decoration-none hover-underline" href="https://www.linkedin.com/in/hui-kai-chung-970ab6140/">-> linkedin</a>
+            <a class="underlink m-2 fs-7 text-decoration-none hover-underline" href="https://medium.com/@huikaichung1999">-> Medium</a>
         </div>
         <div class="text-center">
             <!-- to do : 點擊後複製 -->

@@ -30,9 +30,10 @@
 
 <style scoped>
     p{
-        font-size: 18px;
+        font-size: 1rem;
         line-height: 1;
         letter-spacing: 0.10rem;
+        font-weight: 200;
     }
     .btn{
         border-radius: 0px;
