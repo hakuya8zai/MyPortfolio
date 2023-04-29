@@ -29,8 +29,9 @@ import { getDatabase, ref, set, onValue, get, child } from "firebase/database";
 import { getStorage } from "firebase/storage";
 
 const RtDb = getDatabase(firebaseApp); //從初始化的 app 再初始化 db
-const storage = getStorage(firebaseApp); //初始化 storage
+const Storage = getStorage(firebaseApp); //初始化 storage
 const WorkRef = ref(RtDb, "works/");
+
 function addWorkData(
   new_id,
   new_tag,
@@ -41,8 +42,8 @@ function addWorkData(
   new_donedate,
   new_viewcounts
 ) {
-  set(ref(RtDb, "works/" + new_id), {
-    id: new_id,
+  set(ref(RtDb, "works/" + new_title + new_id), {
+    uid: new_id,
     tag: new_tag,
     route: new_route,
     image: new_image,
@@ -53,4 +54,4 @@ function addWorkData(
   });
 }
 
-export { addWorkData, WorkRef, storage };
+export { addWorkData, WorkRef, Storage };

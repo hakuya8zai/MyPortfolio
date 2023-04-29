@@ -9,7 +9,7 @@
             <div class="col-12 col-md-10">
                 <div class="row">
                     <div v-for="project in projects" class="project-card col-lg-4 col-md-6 col-12">
-                        <router-link to="/MyPortfolio/About">
+                        <router-link :to="project.route">
                             <div class="card text-white bg-black p-0 mb-3" aria-hidden="true">
                                 <img v-bind:src="project.image" class="card-img-top mb-3" alt="Click Here">
                                 <h5 class="card-text m-0">{{project.title}}</h5>
