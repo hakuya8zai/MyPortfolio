@@ -1,4 +1,5 @@
 import Home from "../views/Home.vue";
+import WorkBS from "../views/WorkBS.vue";
 
 const routes = [
   {
@@ -24,7 +25,7 @@ const routes = [
   {
     path: "/MyPortfolio/backstage/workwall",
     name: "workwall",
-    component: () => import("../views/WorkBS.vue"),
+    component: WorkBS,
   },
 ];
 

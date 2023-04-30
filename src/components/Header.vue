@@ -18,7 +18,7 @@
               <router-link to="/MyPortfolio/Work" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">Work</router-link>
             </li>
             <li class="nav-item bt-border text-center ms-lg-auto">
-              <router-link to="/MyPortfolio/backstage/workwall" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">Resume</router-link>
+              <router-link to="/MyPortfolio/Resume" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">Resume</router-link>
             </li>
             <li class="nav-item text-center ms-lg-auto">
               <a href="https://medium.com/@huikaichung1999" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">Medium</a>
