@@ -1,6 +1,6 @@
 <template>
     <section class="container bg-light pt-5">
-        <form @submit.prevent="UploadWorkData" class="row justify-content-center">
+        <form @submit="UploadWorkData" class="row justify-content-center">
             <div class="col-10 mb-3">
                 <label for="inputTheme" class="form-label">Title</label>
                 <input type="text" v-model="newWorkTitle" class="form-control" id="inputTheme" placeholder="請輸入主題">
@@ -32,7 +32,7 @@
                 <input type="file" class="form-control" id="file-input" ref="fileInput" @change="handleFileSelect" accept="image/*">
 
                 <div v-if="imageUrl" class="mb-3">
-                    <img :src="imageUrl" class="img-thumbnail" alt="Selected Image">
+                    <img :src="imageUrl" class="img-fluid" alt="Selected Image">
                 </div>
                 <button type="button" class="btn btn-primary mt-3" @click="uploadFile" :disabled="!selectedFile">上傳圖片</button>
             </div>
@@ -48,8 +48,9 @@
 <script setup>
     import { ref } from 'vue';
     import { addWorkData , WorkRef , Storage } from "../main.js";
-    import { push , child, query } from "firebase/database";
-    import { getStorage, ref as storageRef, uploadBytes } from 'firebase/storage';
+    import { push , child } from "firebase/database";
+    import { ref as storageRef, uploadBytes , getDownloadURL } from 'firebase/storage';
+    import { async } from '@firebase/util';
 
     const ImgRef = storageRef(Storage, "workCovers");
     const newKey = push(child(WorkRef, "works")).key;
@@ -64,10 +65,12 @@
     //上傳檔案預覽
     const selectedFile = ref(null);
     const imageUrl = ref(null);
+    const fileInput = ref(null);
 
-    const handleFileSelect = (event) => {
+    function handleFileSelect(event){
         // 获取所选文件的引用
         selectedFile.value = event.target.files[0];
+        console.log(selectedFile.value);
         // 读取所选文件并显示图像预览
         const reader = new FileReader();
         reader.readAsDataURL(selectedFile.value);
@@ -75,24 +78,24 @@
             imageUrl.value = reader.result;
         };
     };
-    const uploadFile = async () => {
-    // 将所选文件上传到Firebase存储
+    async function uploadFile (){
+    // upload selected file to Firebase
     const fileRef = storageRef(ImgRef, selectedFile.value.name);
     await uploadBytes(fileRef, selectedFile.value);
-    // 上传成功后，重置组件状态
+    // get download url
+    newWorkImage = await getDownloadURL(fileRef);
+
+    // when upload success, reset input element
     selectedFile.value = null;
     imageUrl.value = null;
-
-    let fileinput = document.getElementById("file-input");
-    // fileinput.fileInput.value = '';
-    alert('文件上传成功！');
+    fileInput.value = '';
+    alert('文件上传成功！下载URL: ' + newWorkImage);
     };
 
 
 
 
-    function UploadWorkData(){
-        console.log(new File(newWorkImage));
+    async function UploadWorkData(){
         addWorkData( newKey, newWorkTag.value, "/Work/"+newWorkRoute.value, newWorkImage, newWorkTitle.value, newWorkComment.value, newWorkDonedate.value, newWorkViewcounts.value);
     }
 </script>
