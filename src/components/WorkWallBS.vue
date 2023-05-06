@@ -19,7 +19,7 @@
             </div>
             <div class="col-10 mb-3">
                 <label for="inputDonedate" class="form-label">Donedate</label>
-                <input type="text" v-model="newWorkDonedate" class="form-control" id="inputDonedate" placeholder="請輸入日期">
+                <input type="month" v-model="newWorkDonedate" class="form-control" id="inputDonedate">
             </div>
             <div class="col-10 mb-3">
                 <label for="inputViewcount" class="form-label">Viewcounts</label>
@@ -28,10 +28,10 @@
 
 
             <div class="col-10 mb-3">
-                <label for="file-input" class="form-label">選擇封面</label>
+                <label for="file-input" class="form-label">選擇封面(720*420)</label>
                 <input type="file" class="form-control" id="file-input" ref="fileInput" @change="handleFileSelect" accept="image/*">
 
-                <div v-if="imageUrl" class="mb-3">
+                <div v-if="imageUrl" class="mt-3">
                     <img :src="imageUrl" class="img-fluid" alt="Selected Image">
                 </div>
                 <button type="button" class="btn btn-primary mt-3" @click="uploadFile" :disabled="!selectedFile">上傳圖片</button>
@@ -59,7 +59,7 @@
     let newWorkImage = ref('');
     let newWorkTitle = ref('');
     let newWorkComment = ref('');
-    let newWorkDonedate = ref('');
+    let newWorkDonedate = ref('2023-01');
     let newWorkViewcounts = ref('');
 
     //上傳檔案預覽
@@ -70,7 +70,6 @@
     function handleFileSelect(event){
         // 获取所选文件的引用
         selectedFile.value = event.target.files[0];
-        console.log(selectedFile.value);
         // 读取所选文件并显示图像预览
         const reader = new FileReader();
         reader.readAsDataURL(selectedFile.value);
@@ -89,13 +88,12 @@
     selectedFile.value = null;
     imageUrl.value = null;
     fileInput.value = '';
-    alert('文件上传成功！下载URL: ' + newWorkImage);
+    alert('文件上傳成功，URL: ' + newWorkImage);
     };
 
 
-
-
     async function UploadWorkData(){
+        //計算日期
         addWorkData( newKey, newWorkTag.value, "/Work/"+newWorkRoute.value, newWorkImage, newWorkTitle.value, newWorkComment.value, newWorkDonedate.value, newWorkViewcounts.value);
     }
 </script>

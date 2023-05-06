@@ -10,7 +10,7 @@
                 <div class="row">
                     <div v-for="project in projects" class="project-card col-lg-4 col-md-6 col-12">
                         <router-link :to="project.route">
-                            <div class="card text-white bg-black p-0 mb-3" aria-hidden="true">
+                            <div class="card text-white bg-black p-0 mb-3">
                                 <img v-bind:src="project.image" class="card-img-top mb-3" alt="Click Here">
                                 <h5 class="card-text m-0">{{project.title}}</h5>
                                 <p class="card-text m-0">
@@ -20,9 +20,14 @@
                                 </p>
                                 <p class="card-text mt-0">
                                     <small class="text-muted">
-                                        <span>{{project.donedate}}</span>
+                                        <span v-if="Math.floor(project.donedate/12)">{{Math.floor(project.donedate/12)}}</span>
+                                        <span v-if="Math.floor(project.donedate/12)"> year </span>
+                                        <span v-if="project.donedate%12">{{project.donedate%12}}</span>
+                                        <span v-if="project.donedate%12"> months </span>
+                                        <span> ago</span>
                                         <span>・</span>
                                         <span>{{project.viewcounts}}</span>
+                                        <span> views</span>
                                     </small>
                                 </p>
                             </div>
@@ -46,6 +51,7 @@
     //get works from db
     getWorkData();
 
+
     function getWorkData() {
     //第一次完，每次更動也會 update
     //To do：不知道為什麼現在必須要重新刷新才有，不會自己 update
@@ -53,18 +59,34 @@
         if (snapshot.exists()) {
         const data = snapshot.val();
         addWork(data);
-        } else {
+        }
+        else {
         console.log("No data available");
         }
     });
     }
 
+    //計算日期間隔
+    function DateCount(timeText){
+        let newMonth = new Date(timeText.donedate).getMonth();
+        let newYear = new Date(timeText.donedate).getYear();
+        let nowMonth = new Date().getMonth();
+        let nowYear = new Date().getYear();
+        let monthSpan = nowMonth - newMonth + ( nowYear - newYear )*12;
+        timeText.donedate = monthSpan;
+        console.log(timeText.donedate);
+    }
+
+
     function addWork (data){
         const dataArr = Object.keys(data).map(key => data[key]); //把 json object 轉回 array
-        console.log(dataArr[0].title);
+
 
         //push works
         for(let i =0; i<dataArr.length;i++){
+            DateCount(dataArr[i]);
+            console.log(dataArr[i].donedate);
+
             projects.value.unshift(dataArr[i]);
         }
     }
