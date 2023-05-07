@@ -10,8 +10,36 @@
                 <input type="text" v-model="newWorkRoute" class="form-control" id="inputRoute" placeholder="請輸入路徑">
             </div>
             <div class="col-10 mb-3">
-                <label for="inputTag" class="form-label">Tag</label>
-                <input type="text" v-model="newWorkTag" class="form-control" id="inputTag" placeholder="請輸入 Tag">
+                <p>Tags</p>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input tag-Checkbox" type="checkbox" id="tagCheckbox1" value="PM">
+                    <label class="form-check-label" for="tagCheckbox1">PM</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input tag-Checkbox" type="checkbox" id="tagCheckbox2" value="Frontend">
+                    <label class="form-check-label" for="tagCheckbox2">Frontend</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input tag-Checkbox" type="checkbox" id="tagCheckbox3" value="UIUX">
+                    <label class="form-check-label" for="tagCheckbox3">UIUX</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input tag-Checkbox" type="checkbox" id="tagCheckbox4" value="App">
+                    <label class="form-check-label" for="tagCheckbox4">App</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input tag-Checkbox" type="checkbox" id="tagCheckbox5" value="Web">
+                    <label class="form-check-label" for="tagCheckbox5">Web</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input tag-Checkbox" type="checkbox" id="tagCheckbox6" value="Commercial">
+                    <label class="form-check-label" for="tagCheckbox6">Commercial</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input tag-Checkbox" type="checkbox" id="tagCheckbox0" value="Recommended">
+                    <label class="form-check-label" for="tagCheckbox0">Recommended</label>
+                </div>
+
             </div>
             <div class="col-10 mb-3">
                 <label for="inputComment" class="form-label">Comment</label>
@@ -54,7 +82,7 @@
 
     const ImgRef = storageRef(Storage, "workCovers");
     const newKey = push(child(WorkRef, "works")).key;
-    let newWorkTag = ref('');
+    let newWorkTag =[] ;
     let newWorkRoute = ref('');
     let newWorkImage = ref('');
     let newWorkTitle = ref('');
@@ -66,6 +94,25 @@
     const selectedFile = ref(null);
     const imageUrl = ref(null);
     const fileInput = ref(null);
+
+    window.onload = function(){
+        const TagCheckBoxesHtml = document.getElementsByClassName("tag-Checkbox");
+        for(let i=0;i<TagCheckBoxesHtml.length;i++){
+            TagCheckBoxesHtml[i].addEventListener("click", () => {
+                TagSelect(TagCheckBoxesHtml);
+            })
+        }
+    };
+
+    function TagSelect(boxes){
+        let tempArr = [];
+        for(let i =0;i<boxes.length;i++){
+            if(boxes[i].checked){
+                tempArr.push(boxes[i].value);
+            }
+        }
+        newWorkTag = tempArr;
+    }
 
     function handleFileSelect(event){
         // 获取所选文件的引用
@@ -94,6 +141,6 @@
 
     async function UploadWorkData(){
         //計算日期
-        addWorkData( newKey, newWorkTag.value, "/Work/"+newWorkRoute.value, newWorkImage, newWorkTitle.value, newWorkComment.value, newWorkDonedate.value, newWorkViewcounts.value);
+        addWorkData( newKey, newWorkTag, "/Work/"+newWorkRoute.value, newWorkImage, newWorkTitle.value, newWorkComment.value, newWorkDonedate.value, newWorkViewcounts.value);
     }
 </script>
