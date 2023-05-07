@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-black container-fluid pt-0">
+    <section class="bg-black container-fluid pt-0" style="min-height: 500px;">
         <div class="project-wall row justify-content-center">
             <div class="col-12 col-md-10">
                 <div class="row">

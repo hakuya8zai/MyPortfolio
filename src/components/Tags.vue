@@ -1,7 +1,7 @@
 <template>
     <section class="bg-black container-fluid pt-5">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-10">
+            <div class="col-12 col-md-10 overflow-scroll">
                 <!-- tags 是固定好的，中間用 / 隔開 -->
                 <div class="btn-group" role="group" >
                     <input value="All" type="radio" class="btn-check" name="tagradio" id="AllTag" autocomplete="off" v-model="NowTag" checked >
@@ -32,6 +32,8 @@
                     <label class="btn tags-btn btn-outline-dark" for="AppTag">App</label>
 
                 </div>
+            </div>
+            <div class="col-12 col-md-10">
                 <div class="divider mb-4 mt-0"></div>
             </div>
         </div>
