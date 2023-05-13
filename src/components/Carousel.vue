@@ -3,11 +3,12 @@
         <div class="project-wall row justify-content-center">
             <div class="col-12 col-md-10">
                 <div class="row">
-                    <div v-for="project in projects" v-show="project.screened" class="project-card col-lg-4 col-md-6 col-12">
+                    <div v-for="(project,index) in projects" :key="index" v-show="project.screened" class="project-card col-lg-4 col-md-6 col-12">
                         <router-link :to="project.route">
                             <div class="card text-white bg-black p-0 mb-3">
-                                <img v-bind:src="project.image" class="card-img-top mb-3" alt="Click Here">
-                                <h5 class="card-text m-0">{{project.title}}</h5>
+                                <img v-bind:src="project.image" class="card-img-top" alt="Click Here" @load="hidePlaceholder(index)">
+                                <div v-show="showPlaceholder[index]" class="ratio bg-light card-img-top placeholder" style="--bs-aspect-ratio: 58%;"></div>
+                                <h5 class="card-text m-0 mt-3">{{project.title}}</h5>
                                 <p class="card-text m-0">
                                     <small class="text-muted">
                                         <span>{{project.comment}}</span>
@@ -37,11 +38,10 @@
 </template>
 
 <script setup>
-    import { ref } from 'vue';
+    import { ref , onMounted } from 'vue';
     import{ WorkRef } from '../main.js'
     import { onValue, get, query } from "firebase/database";
     const projects = ref([]);
-    console.log(projects);
     const TagButtons = document.getElementsByName('tagradio');
     for(let i = 0;i<TagButtons.length;i++){
         TagButtons[i].addEventListener("click", () =>{
@@ -50,12 +50,30 @@
             ScreenWork(screenedTag);
         })
     }
+    const showPlaceholder = ref([]);
+    console.log(showPlaceholder);
+
+
+    function initialPlaceholders(ProVal){
+        //另一種比較漂亮（？的寫法
+        // showPlaceholder.value = Array.from({ length: ProVal.length }, () => true);
+
+        //比較 rough 的寫法，把 placeholder 都設成 true
+        for(let i =0;i<ProVal.length;i++){
+            showPlaceholder.value[i] = true;
+        }
+
+    }
+    function hidePlaceholder(index){
+        showPlaceholder.value[index] = false;
+    }
 
 
     //get works from db
     getWorkData();
+    
 
-
+    
     function getWorkData() {
     //第一次完，每次更動也會 update
     // onValue(WorkRef, (snapshot) => {
@@ -122,6 +140,7 @@
             dataArr[i].screened = true;
         }
         projects.value = dataArr;
+        initialPlaceholders(projects.value);
     }
 
     function ScreenWork(chosenTag){
@@ -181,5 +200,26 @@
         box-shadow: 0px 0px 10px white;
 
         border-radius: 5px;
+    }
+    .placeholder{
+        opacity: 90%;
+        background-color: gray !important;
+        animation-name: breathe;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-out;
+        animation-duration: 0.3s;
+    }
+    .placeholder:hover{
+        cursor: default;
+    }
+    @keyframes breathe {
+        0%{
+            opacity: 0.5;
+        }
+        100%{
+            opacity: 0.9;
+        }
+        
     }
 </style>
