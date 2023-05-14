@@ -75,10 +75,9 @@
 
 <script setup>
     import { ref } from 'vue';
-    import { addWorkData , WorkRef , Storage } from "../main.js";
+    import { addWorkData , WorkRef , Storage ,auth } from "../main.js";
     import { push , child } from "firebase/database";
     import { ref as storageRef, uploadBytes , getDownloadURL } from 'firebase/storage';
-    import { async } from '@firebase/util';
 
     const ImgRef = storageRef(Storage, "workCovers");
     const newKey = push(child(WorkRef, "works")).key;
@@ -143,4 +142,8 @@
         //計算日期
         addWorkData( newKey, newWorkTag, "/Work/"+newWorkRoute.value, newWorkImage, newWorkTitle.value, newWorkComment.value, newWorkDonedate.value, newWorkViewcounts.value);
     }
+
+
+
+
 </script>

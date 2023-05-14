@@ -23,6 +23,11 @@ const routes = [
     component: () => import("../views/404.vue"),
   },
   {
+    path: "/MyPortfolio/Login",
+    name: "Login",
+    component: () => import("../views/Login.vue"),
+  },
+  {
     path: "/MyPortfolio/backstage/workwall",
     name: "workwall",
     component: WorkBS,
