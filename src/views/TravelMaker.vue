@@ -314,7 +314,7 @@
                         <div class="text-center">
                             <img src="../assets/TravelMaker/Travelmaker_Logo.svg" class="img-fluid" alt="">
                         </div>
-                        <a href="https://www.figma.com/proto/prrQCaOrDpzMd3DmCon6VX/Travel-Maker?kind=&node-id=364%3A3631&page-id=364%3A366&scaling=scale-down&show-proto-sidebar=1&starting-point-node-id=364%3A3631" class="btn btn-cta mt-4 mb-2 fs-5 fw-bold" type="button">Try TravelMaker</a>
+                        <a href="https://www.figma.com/proto/prrQCaOrDpzMd3DmCon6VX/Travel-Maker?kind=&node-id=364%3A3631&page-id=364%3A366&scaling=scale-down&show-proto-sidebar=1&starting-point-node-id=364%3A3631" class="btn btn-cta mt-4 mb-2 fs-5 fw-bold" target="_blank" type="button">Try TravelMaker</a>
                     </div>
                 </div>
             </div>
