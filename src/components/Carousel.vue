@@ -51,7 +51,6 @@
         })
     }
     const showPlaceholder = ref([]);
-    console.log(showPlaceholder);
 
 
     function initialPlaceholders(ProVal){

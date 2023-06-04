@@ -1,13 +1,13 @@
 <template>
     <section class="container-fluid">
         <div class="row" data-bs-spy="scroll" data-bs-target="#sideNav" data-bs-smooth-scroll="true" tabindex="0">
-            <div class="col-12 banner p-0">
+            <div class="col-12 banner p-0"  id="item-1">
                 <img src="../assets/TravelMaker/TravelMaker_Banner.png" class="img-fluid" alt="...">
             </div>
             <div class="col-3 d-none d-lg-block"></div>
             <div class="col-12 col-lg-6 content">
                 <div class="pt-5 border-start">
-                    <div class="pt-5 pb-5 row justify-content-center" id="item-1">
+                    <div class="pt-5 pb-5 row justify-content-center">
                         <div class="col-12 col-md-8">
                             <img src="../assets/TravelMaker/TravelMaker_Intro.png" class="img-fluid" alt="">
                         </div>
@@ -330,7 +330,6 @@
             right: 0;
             transform: translateY(-50%);
             padding: 20px;
-            z-index: 99; /* 設置較高的 z-index，使其在上層顯示 */
             opacity: 0;
             transition:opacity 0.5s;
         }
@@ -364,11 +363,11 @@
             color:#D9D9D9;
             border-radius: 5px;
         }
-        .nav-link.active{
+        .nav-link:hover{
             box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
             background-color: white;
             color: #8D8D8D;
-            font-weight: 500;
+            font-weight: 400;
 
         }
         .cursorDefault{
@@ -383,31 +382,50 @@
         #item-7{
             background-color: #89B9CD;
         }
+        .border-start{
+            border-left:#89B9CD dashed medium !important;
+        
+        }
 </style>
 
 <script setup>
-        import { ref } from 'vue';
+import { ref , onMounted } from 'vue';
+        import { onBeforeRouteLeave } from 'vue-router';
 
+        let sidenavLink;
+        let banner;
+        let sidenavContainer;
 
-        window.addEventListener('DOMContentLoaded', (event) => {
-            const sidenavContainer = document.querySelector('#sideNav');
-            const sidenavLink = sidenavContainer.getElementsByClassName("nav-link");
-            const banner = document.querySelector('.banner');
-
+        onMounted(()=>{
+            sidenavContainer = document.querySelector('#sideNav');
+            sidenavLink = sidenavContainer.getElementsByClassName("nav-link");
+            banner = document.querySelector('.banner');
             // 監聽視窗滾動事件
-            window.addEventListener('scroll', () => {
-                const bannerPosition = banner.getBoundingClientRect().bottom;
+            window.addEventListener('scroll', ScrollListener);
+
+        })
+
+        function ScrollListener(){
+            const bannerPosition = banner.getBoundingClientRect().bottom;
                 if (bannerPosition <= 150) {
                     sidenavContainer.style.opacity = 1;
                     for(let i = 0; i<sidenavLink.length; i++){
                         sidenavLink[i].classList.remove("cursorDefault");
                     }
-                } else {
+                }
+                else {
                     sidenavContainer.style.opacity = 0;
                     for(let i = 0; i<sidenavLink.length; i++){
                         sidenavLink[i].classList.add("cursorDefault");
                     }
                 }
-            });
+        }
+
+
+        onBeforeRouteLeave((to, from, next) => {
+            // 移除 window 的事件監聽器
+            window.removeEventListener('scroll', ScrollListener);
+            console.log("remove");
+            next(); // 繼續導航
         });
 </script>
