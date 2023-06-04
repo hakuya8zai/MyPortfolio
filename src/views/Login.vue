@@ -1,5 +1,5 @@
 <template>
-    <section class="container-fluid bg-dark pt-5 mt-5">
+    <section class="container-fluid bg-dark">
         <div class="row text-bg-dark justify-content-center">
             <div class="col-10 col-md-3"><img src="../assets/Backdoor.svg" alt=""></div>
             <div class="col-10 col-md-5 pt-5">
@@ -28,7 +28,7 @@
     import { auth } from "../main.js";
     import { signInWithEmailAndPassword } from "firebase/auth";
     import { ref , onMounted } from "vue";
-import router from "../router";
+    import router from "../router";
     const Email = ref('');
     const Password = ref('');
 

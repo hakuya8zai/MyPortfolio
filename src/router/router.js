@@ -1,5 +1,6 @@
 import Home from "../views/Home.vue";
 import WorkBS from "../views/WorkBS.vue";
+import TravelMaker from "../views/TravelMaker.vue";
 
 const routes = [
   {
@@ -31,6 +32,11 @@ const routes = [
     path: "/MyPortfolio/backstage/workwall",
     name: "workwall",
     component: WorkBS,
+  },
+  {
+    path: "/MyPortfolio/Work/TravelMaker",
+    name: "TravelMaker",
+    component: TravelMaker,
   },
 ];
 

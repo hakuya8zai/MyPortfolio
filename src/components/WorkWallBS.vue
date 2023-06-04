@@ -140,7 +140,7 @@
 
     async function UploadWorkData(){
         //計算日期
-        addWorkData( newKey, newWorkTag, "/Work/"+newWorkRoute.value, newWorkImage, newWorkTitle.value, newWorkComment.value, newWorkDonedate.value, newWorkViewcounts.value);
+        addWorkData( newKey, newWorkTag, "/MyPortfolio/Work/"+newWorkRoute.value, newWorkImage, newWorkTitle.value, newWorkComment.value, newWorkDonedate.value, newWorkViewcounts.value);
     }
 
 

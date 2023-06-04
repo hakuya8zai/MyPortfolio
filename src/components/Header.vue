@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-black bg-black border-bottom border-1 border-white fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-black bg-black border-bottom border-1 border-white sticky-top">
       <div class="container-fluid">
         <router-link to="/MyPortfolio" class="navbar-brand">
             <img src="../assets/Frank_logo.svg" alt="">
@@ -27,7 +27,6 @@
         </div>
       </div>
     </nav>
-    <div class="m-5"></div>
 </template>
 
 <script setup>
