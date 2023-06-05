@@ -40,31 +40,52 @@ const routes = [
   {
     path: "/MyPortfolio/Work/PersonalityQuiz",
     name: "PersonalityQuiz",
-    redirect:
-      "https://cookie-place-537.notion.site/Junyi-f89612e0e20b4feca5a710e2fd46f147",
+    redirect: () => {
+      window.open(
+        "https://cookie-place-537.notion.site/Junyi-f89612e0e20b4feca5a710e2fd46f147",
+        "_blank"
+      );
+    },
   },
   {
     path: "/MyPortfolio/Work/InshoneDesign",
     name: "InshoneDesign",
-    redirect:
-      "https://cookie-place-537.notion.site/7ea75a0f43c64179b934cc40b70b4656",
+    redirect: () => {
+      window.open(
+        "https://cookie-place-537.notion.site/7ea75a0f43c64179b934cc40b70b4656",
+        "_blank"
+      );
+    },
   },
   {
     path: "/MyPortfolio/Work/LilyChen",
     name: "LilyChen",
-    redirect:
-      "https://cookie-place-537.notion.site/Lily-Chen-Website-4af5b9ec108d4a1888da1803646fc3b7",
+    redirect: () => {
+      window.open(
+        "https://cookie-place-537.notion.site/Lily-Chen-Website-4af5b9ec108d4a1888da1803646fc3b7",
+        "_blank"
+      );
+    },
   },
   {
     path: "/MyPortfolio/Work/AwardHunter",
     name: "AwardHunter",
-    redirect:
-      "https://cookie-place-537.notion.site/App-Redesign-25de4cd8b9f445628d217de9fd78e5a9",
+    redirect: () => {
+      window.open(
+        "https://cookie-place-537.notion.site/App-Redesign-25de4cd8b9f445628d217de9fd78e5a9",
+        "_blank"
+      );
+    },
   },
   {
     path: "/MyPortfolio/Work/BinaryCube",
     name: "BinaryCube",
-    redirect: "https://play.google.com/store/apps/developer?id=Forced_Dev",
+    redirect: () => {
+      window.open(
+        "https://play.google.com/store/apps/developer?id=Forced_Dev",
+        "_blank"
+      );
+    },
   },
 ];
 
