@@ -50,6 +50,7 @@
             ScreenWork(screenedTag);
         })
     }
+
     const showPlaceholder = ref([]);
 
 
@@ -91,6 +92,7 @@
         if (snapshot.exists()) {
             const data = snapshot.val();
             addWork(data);
+            ScreenWork("Recommended"); //讓載入完以後，先篩選為只有 Recommended，Tags 也先 ref 了
         } else {
             console.log("No data available");
         }
