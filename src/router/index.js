@@ -7,6 +7,7 @@ import routes from "../router/router.js";
 
 const router = createRouter({
   history: createWebHistory(),
+  base: "/MyPortfolio/",
   routes: routes,
   scrollBehavior(to, from, savedPosition) {
     // always scroll to top
