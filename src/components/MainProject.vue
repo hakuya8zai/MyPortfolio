@@ -4,45 +4,53 @@
             <div class="col-md-10 col-12">
                 <div class="row row-cols-lg-2 row-cols-1 card-deck justify-content-center justify-content-lg-between">
                     <div class="col pt-2 pb-2">
-                        <div class="card bg-light text-center">
-                            <img src="../assets/TravelMaker_Mockup_Phone.png" class="card-img" alt="...">
-                            <div class="card-img-overlay">
-                                <h2 class="card-title">TravelMaker</h2>
-                                <h4 class="card-text">幫助旅行者快速找到替代方案的旅遊行程管理軟體</h4>
-                                <h6 class="card-text">Product Manager, UX Designer</h6>
+                        <router-link :to="'/MyPortfolio/Work/TravelMaker'">
+                            <div class="card bg-light text-center">
+                                <img src="../assets/TravelMaker/TravelMaker_Cover.png" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h2 class="card-title">TravelMaker</h2>
+                                    <h4 class="card-text">幫助旅行者快速找到替代方案的旅遊行程管理軟體</h4>
+                                    <h6 class="card-text">Product Manager, UX Designer</h6>
+                                </div>
                             </div>
-                        </div>
+                        </router-link>
                     </div>
                     <div class="col pt-2 pb-2">
-                        <div class="card bg-light text-center">
-                            <img src="../assets/Inshone_Mockup_Phone.png" class="card-img" alt="...">
-                            <div class="card-img-overlay">
-                                <h2 class="card-title">影相設計</h2>
-                                <h4 class="card-text">提供模組化影像製作方案的選購平台</h4>
-                                <h6 class="card-text">Product Designer, Frontend Developer</h6>
+                        <router-link :to="'/MyPortfolio/Work/InshoneDesign'">
+                            <div class="card bg-light text-center">
+                                <img src="../assets/InshoneDesign/InshoneDesign_Cover.png" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h2 class="card-title">影相設計</h2>
+                                    <h4 class="card-text">提供模組化影像製作方案的選購平台</h4>
+                                    <h6 class="card-text">Product Designer, Frontend Developer</h6>
+                                </div>
                             </div>
-                        </div>
+                        </router-link>
                     </div>
 
                     <div class="col pt-2 pb-2">
-                        <div class="card bg-light text-center">
-                            <img src="../assets/Lily_Mockup_Phone.png" class="card-img" alt="...">
-                            <div class="card-img-overlay">
-                                <h2 class="card-title">Lily Chen Website</h2>
-                                <h4 class="card-text">攝影師 Lily Chen 的個人品牌網站</h4>
-                                <h6 class="card-text">Product Manager, UI/UX Designer</h6>
+                        <router-link :to="'/MyPortfolio/Work/LilyChen'">
+                            <div class="card bg-light text-center">
+                                <img src="../assets/LilyChen/LilyChen_Cover.png" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h2 class="card-title">Lily Chen Website</h2>
+                                    <h4 class="card-text">攝影師 Lily Chen 的個人品牌網站</h4>
+                                    <h6 class="card-text">Product Manager, UI/UX Designer</h6>
+                                </div>
                             </div>
-                        </div>
+                        </router-link>
                     </div>
                     <div class="col pt-2 pb-2">
-                        <div class="card bg-light text-center">
-                            <img src="../assets/Junyi_Mockup_Phone.png" class="card-img" alt="...">
-                            <div class="card-img-overlay">
-                                <h2 class="card-title">學習風格測驗</h2>
-                                <h4 class="card-text">均一教育平台的心理測驗互動式網頁</h4>
-                                <h6 class="card-text">Product Designer, Frontend Developer</h6>
+                        <router-link :to="'/MyPortfolio/Work/PersonalityQuiz'">
+                            <div class="card bg-light text-center">
+                                <img src="../assets/PersonalityQuiz/PersonalityQuiz_Cover.png" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h2 class="card-title">學習風格測驗</h2>
+                                    <h4 class="card-text">均一教育平台的心理測驗互動式網頁</h4>
+                                    <h6 class="card-text">Product Designer, Frontend Developer</h6>
+                                </div>
                             </div>
-                        </div>
+                        </router-link>
                     </div>
 
                 </div>
@@ -64,7 +72,7 @@
     }
     .card-img{
         max-height: 300px;
-        object-fit: contain;
+        object-fit: cover;
     }
     .card-img:hover{
         cursor: pointer;

@@ -46,7 +46,7 @@
 </template>
 <script setup>
     import { ref } from 'vue';
-    const NowTag = ref('All');    
+    const NowTag = ref('Recommended');    
 </script>
 
 <style scoped>

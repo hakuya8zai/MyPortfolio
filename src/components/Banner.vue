@@ -22,20 +22,26 @@
             </div>
             <div class="row justify-content-lg-end">
                 <div class="col-12 text-center text-md-end d-none d-md-block">
-                    <p class="display-2 blur delete-decoration mb-0">Frontend Engineer</p>
+                    <p class="display-2 blur  mb-0">Frontend Engineer</p>
                 </div>
             </div>
             <div class="row justify-content-lg-end">
                 <div class="col-12 text-center text-md-end d-none d-md-block">
-                    <p class="display-2 blur delete-decoration">Product Manager</p>
+                    <p class="display-2 blur ">Product Manager</p>
                 </div>
             </div>
             <div class="row mt-5">
-                <div class="col-lg-3 col-md-6 col-12 mb-3 d-grid">
-                    <button class="btn btn-outline-warning btn-lg">More Frank</button>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mb-3 d-grid">
-                    <button class="btn btn-outline-light btn-lg">Resume</button>
+                    <div class="col-lg-3 col-md-6 col-12 mb-3">
+                        <router-link :to="'/MyPortfolio/About'" class="d-grid text-decoration-none">
+                            <button class="btn btn-outline-warning btn-lg cursorFix">
+                                    More Frank
+                            </button>
+                        </router-link>
+                    </div>
+                <div class="col-lg-3 col-md-6 col-12 mb-3">
+                    <router-link :to="'../assets/Resume/FrankResume.pdf'" target="_blank" class="d-grid text-decoration-none">
+                        <button class="btn btn-outline-light btn-lg cursorFix">Resume</button>
+                    </router-link>
                 </div>
             </div>
         </section>
@@ -56,5 +62,8 @@
     }
     button{
         border-radius: 0px;
+    }
+    .cursorFix{
+        cursor: pointer;
     }
 </style>

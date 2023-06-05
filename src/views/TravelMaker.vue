@@ -363,12 +363,11 @@
             color:#D9D9D9;
             border-radius: 5px;
         }
-        .nav-link:hover{
+        .nav-link:hover, .nav-link.active {
             box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
             background-color: white;
             color: #8D8D8D;
             font-weight: 400;
-
         }
         .cursorDefault{
             cursor: default;
