@@ -9,7 +9,7 @@
         </div>
         <div class="text-center">
             <!-- to do : 點擊後複製 -->
-            <a class="m-2 text-secondary text-decoration-none hover-underline font-sm" href="#">hakuya8zai@gmail.com</a> 
+            <a class="m-2 text-secondary text-decoration-none hover-underline font-sm">huikaichung1999@gmail.com</a> 
         </div>
         <div class="text-center p-0 m-2 text-secondary font-sm">
             Copyright @2023 FrankChung.
