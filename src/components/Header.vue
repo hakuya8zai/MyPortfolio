@@ -18,7 +18,8 @@
               <router-link to="/MyPortfolio/Work" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">Work</router-link>
             </li>
             <li class="nav-item bt-border text-center ms-lg-auto">
-                <a href="https://firebasestorage.googleapis.com/v0/b/frankportfolio-e3ae3.appspot.com/o/Resume%2FFrankResume.pdf?alt=media&token=c8b84955-2c2d-4e88-886e-0eebb5e0c8fb" target="_blank" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">Resume</a>
+                <router-link to="/MyPortfolio/Resume" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">Resume</router-link>
+                <!-- <a href="https://firebasestorage.googleapis.com/v0/b/frankportfolio-e3ae3.appspot.com/o/Resume%2FFrankResume.pdf?alt=media&token=c8b84955-2c2d-4e88-886e-0eebb5e0c8fb" target="_blank" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">Resume</a> -->
             </li>
             <li class="nav-item text-center ms-lg-auto">
               <a href="https://medium.com/@huikaichung1999" target="_blank" class="nav-link nlink-style hover-underline-animation ps-3 pe-3">Medium</a>

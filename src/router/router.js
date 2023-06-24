@@ -13,6 +13,11 @@ const routes = [
     component: () => import("../views/About.vue"), //這是動態載入，點了才抓，建議小的用這個
   },
   {
+    path: "/MyPortfolio/Resume",
+    name: "Resume",
+    component: () => import("../views/Resume.vue"), //這是動態載入，點了才抓，建議小的用這個
+  },
+  {
     path: "/MyPortfolio/Work",
     name: "Work",
     component: () => import("../views/Work.vue"), //這是動態載入，點了才抓，建議小的用這個
