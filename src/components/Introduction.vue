@@ -5,13 +5,13 @@
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-10 col-lg-12">
                         <content class="part1 text-white">
-                        <p>I am a designer who advocates freedom and harmony, and hopes to help others solve problems in smart and special ways.</p>
+                            <p>2 years of product development experience, including product design, front-end development, and product management.</p>
                         </content>
                         <content class="part1 text-white">
-                            <p>2+ years of product development experience, including product design, front-end development.</p>
+                            <p>I am a well-rounded product builder with expertise in design, programming, marketing, and business strategy. I have a strong passion for continuous learning and embrace change and growth.</p>
                         </content>
                         <content class="part1 text-white">
-                            <p>A Well-rounded product designer with cross-domain knowledge and experience in design, programming, marketing, and business strategy.</p>
+                            <p>With excellent problem-solving skills, I approach challenges with smart and efficient strategies. My ultimate goal is to create software products that have the potential to make a significant impact and change the world.</p>
                         </content>
                         <div class="row button-wrapper pt-3 pb-3">
                             <div class="col-6 d-grid">
