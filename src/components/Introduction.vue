@@ -18,7 +18,7 @@
                                 <router-link role="button" class="btn btn-outline-warning btn-lg me-3" to="/MyPortfolio/Work">Works</router-link>
                             </div>
                             <div class="col-6 d-grid">
-                                <a href="https://firebasestorage.googleapis.com/v0/b/frankportfolio-e3ae3.appspot.com/o/Resume%2FFrankResume.pdf?alt=media&token=c8b84955-2c2d-4e88-886e-0eebb5e0c8fb" target="_blank" role="button" class="btn btn-outline-light btn-lg me-3">Resume</a>
+                                <router-link role="button" class="btn btn-outline-light btn-lg me-3" to="/MyPortfolio/Resume">Resume</router-link>
                             </div>
                         </div>
                     </div>

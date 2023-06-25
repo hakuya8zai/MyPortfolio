@@ -39,7 +39,11 @@
                         </router-link>
                     </div>
                 <div class="col-lg-3 col-md-6 col-12 mb-3 d-grid">
-                    <a href="https://firebasestorage.googleapis.com/v0/b/frankportfolio-e3ae3.appspot.com/o/Resume%2FFrankResume.pdf?alt=media&token=c8b84955-2c2d-4e88-886e-0eebb5e0c8fb" target="_blank" class="btn btn-outline-light btn-lg">Resume</a>
+                        <router-link to="/MyPortfolio/Resume" class="d-grid text-decoration-none">
+                            <button class="btn btn-outline-light btn-lg cursorFix">
+                                    Resume
+                            </button>
+                        </router-link>
                 </div>
             </div>
         </section>
