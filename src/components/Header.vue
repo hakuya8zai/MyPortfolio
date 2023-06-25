@@ -41,7 +41,7 @@
 
 <style scoped>
     .navbar {
-      box-shadow: 0px 0px 5px white;
+      box-shadow: 0px 0px 15px white;
       position:fixed-top;
     }
 

@@ -54,6 +54,7 @@
         font-weight: 400;
         letter-spacing: .1rem;
         line-height: 0.8;
+        text-shadow: 0px 0px 30px white;
     }
     .blur{
         color: transparent;
