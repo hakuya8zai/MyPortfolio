@@ -7,7 +7,7 @@
                 </div>
                 <div class="resume-card row row-cols-1 row-cols-lg-2 row-cols-lg-3 justify-content-center">
                     <div class="col pdm-card">
-                        <a href="https://firebasestorage.googleapis.com/v0/b/frankportfolio-e3ae3.appspot.com/o/Resume%2F20230626_PDM_ChinesResume.pdf.pdf?alt=media&token=fac55a29-7330-4c51-a21b-904f5d308764" target="_blank" class="nlink-style" @mouseover="PmHover=true" @mouseout="PmHover=false">
+                        <a href="https://drive.google.com/file/d/1Gh3Igl0wlp4JLfamQzfroYQYQYYRBWgV/view?usp=sharing" target="_blank" class="nlink-style" @mouseover="PmHover=true" @mouseout="PmHover=false">
                             <div class="card mt-3 mb-5 bg-dark text-bg-dark">
                                 <img v-show="!PmHover" src="../assets/Resume/PM_Before.png" class="card-img-top img-fluid px-5 pt-4" alt="...">
                                 <img v-show="PmHover"  src="../assets/Resume/PM_After.png" class="card-img-top img-fluid px-5 pt-4" alt="...">
@@ -19,7 +19,7 @@
                         </a>
                     </div>
                     <div class="col fe-card">
-                        <a href="https://firebasestorage.googleapis.com/v0/b/frankportfolio-e3ae3.appspot.com/o/Resume%2F20230626_FED_ChinesResume.pdf?alt=media&token=b691d045-b259-486e-9571-2be3f8865ba3" target="_blank" class="nlink-style" @mouseover="FeHover=true" @mouseleave="FeHover=false">
+                        <a href="https://drive.google.com/file/d/129kI349lR3o80cE2cqAZYatl0dfYvphL/view?usp=sharing" target="_blank" class="nlink-style" @mouseover="FeHover=true" @mouseleave="FeHover=false">
                             <div class="card mt-3 mb-5 bg-dark text-bg-dark">
                                 <img v-show="!FeHover" src="../assets/Resume/FE_Before.png" class="card-img-top img-fluid px-5 pt-4" alt="...">
                                 <img v-show="FeHover"  src="../assets/Resume/FE_After.png" class="card-img-top img-fluid px-5 pt-4" alt="...">
@@ -31,7 +31,7 @@
                         </a>
                     </div>
                     <div class="col ux-card">
-                        <a href="https://firebasestorage.googleapis.com/v0/b/frankportfolio-e3ae3.appspot.com/o/Resume%2F20230626_UXD_ChinesResume.pdf.pdf?alt=media&token=fe98f9dd-28a5-4edd-8316-664c8aa7c2b0" target="_blank" class="nlink-style" @mouseover="UxHover=true" @mouseleave="UxHover=false">
+                        <a href="https://drive.google.com/file/d/1QB-KwCiz72d19tolJO_faywgla2ATd8L/view?usp=sharing" target="_blank" class="nlink-style" @mouseover="UxHover=true" @mouseleave="UxHover=false">
                             <div class="card mt-3 mb-5 bg-dark text-bg-dark">
                                 <img v-show="!UxHover" src="../assets/Resume/UX_Before.png" class="card-img-top img-fluid px-5 pt-4" alt="...">
                                 <img v-show="UxHover"  src="../assets/Resume/UX_After.png" class="card-img-top img-fluid px-5 pt-4" alt="...">
