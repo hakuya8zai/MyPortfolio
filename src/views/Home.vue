@@ -5,5 +5,6 @@
 </script>
 
 <template>
+
     <Carousel />
 </template>

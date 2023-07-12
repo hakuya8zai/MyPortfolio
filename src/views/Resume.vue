@@ -21,7 +21,7 @@
                     <div class="col fe-card">
                         <a href="https://drive.google.com/file/d/129kI349lR3o80cE2cqAZYatl0dfYvphL/view?usp=sharing" target="_blank" class="nlink-style" @mouseover="FeHover=true" @mouseleave="FeHover=false">
                             <div class="card mt-3 mb-5 bg-dark text-bg-dark">
-                                <img v-show="!FeHover" src="../assets/Resume/FE_Before.png" class="card-img-top img-fluid px-5 pt-4" alt="...">
+                                <img v-on:load="Test" v-show="!FeHover" src="../assets/Resume/FE_Before.png" class="card-img-top img-fluid px-5 pt-4" alt="...">
                                 <img v-show="FeHover"  src="../assets/Resume/FE_After.png" class="card-img-top img-fluid px-5 pt-4" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title text-warning">Frontend Developer</h5>
@@ -54,6 +54,10 @@
     const PmHover = ref(false);
     const UxHover = ref(false);
     const FeHover = ref(false);
+
+    function Test(){
+        console.log("Img Done");
+    }
 
 </script>
 <style scoped>
