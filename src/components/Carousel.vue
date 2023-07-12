@@ -1,6 +1,6 @@
 <template>
-    <section class="bg-black container-fluid pt-0" style="min-height: 500px;">
-        <div class="project-wall row justify-content-center">
+    <section class="bg-black container-fluid pt-0">
+        <div class="project-wall row justify-content-center"  style="min-height: 75vh;">
             <div class="col-12 col-md-10">
                 <div class="row">
                     <div v-for="(project,index) in projects" :key="index" v-show="project.screened" class="project-card col-lg-4 col-md-6 col-12">

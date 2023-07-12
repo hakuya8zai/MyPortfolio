@@ -1,13 +1,13 @@
 <template>
     <section class="container-fluid bg-black">
-        <div class="row justify-content-center pt-5 pb-5">
+        <div class="row justify-content-center pt-5 pb-5" style="min-height: 85vh;">
             <div class="col-12 col-md-8 col-lg-8">
                 <div class="resume-title row justify-content-center">
                     <div class="display-5 text-white col-auto mt-3 mb-3">Looking for ...</div>
                 </div>
                 <div class="resume-card row row-cols-1 row-cols-lg-2 row-cols-lg-3 justify-content-center">
                     <div class="col pdm-card">
-                        <a href="https://drive.google.com/file/d/1Gh3Igl0wlp4JLfamQzfroYQYQYYRBWgV/view?usp=sharing" target="_blank" class="nlink-style" @mouseover="PmHover=true" @mouseout="PmHover=false">
+                        <a href="https://drive.google.com/file/d/1VWe_87IfZHtGgGtvqZTbq1mj2l58-UEp/view?usp=sharing" target="_blank" class="nlink-style" @mouseover="PmHover=true" @mouseout="PmHover=false">
                             <div class="card mt-3 mb-5 bg-dark text-bg-dark">
                                 <img v-show="!PmHover" src="../assets/Resume/PM_Before.png" class="card-img-top img-fluid px-5 pt-4" alt="...">
                                 <img v-show="PmHover"  src="../assets/Resume/PM_After.png" class="card-img-top img-fluid px-5 pt-4" alt="...">
@@ -31,7 +31,7 @@
                         </a>
                     </div>
                     <div class="col ux-card">
-                        <a href="https://drive.google.com/file/d/1QB-KwCiz72d19tolJO_faywgla2ATd8L/view?usp=sharing" target="_blank" class="nlink-style" @mouseover="UxHover=true" @mouseleave="UxHover=false">
+                        <a href="https://drive.google.com/file/d/1ERyJS63Gt2jE8V-bW0xPKxV4CM02-hBq/view?usp=sharing" target="_blank" class="nlink-style" @mouseover="UxHover=true" @mouseleave="UxHover=false">
                             <div class="card mt-3 mb-5 bg-dark text-bg-dark">
                                 <img v-show="!UxHover" src="../assets/Resume/UX_Before.png" class="card-img-top img-fluid px-5 pt-4" alt="...">
                                 <img v-show="UxHover"  src="../assets/Resume/UX_After.png" class="card-img-top img-fluid px-5 pt-4" alt="...">
