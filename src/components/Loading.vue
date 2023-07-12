@@ -21,7 +21,7 @@
     height: 100%;
     overflow: hidden;
     z-index: 9999;
-    animation: FadeIn 0.4s ease-in-out ;
+    animation: MoveIn 0.4s ease-in-out ;
   }
   
   .loading-overlay{
@@ -39,15 +39,21 @@
     left: 50%;
     transform: translate(-50%, -50%);
     /* 調整 Spinner 的樣式，例如大小、顏色、動畫等 */
+    animation: FadeIn 0.2s ease-In;
   }
+  /*Loading 載入時，Spinner FadeIn , Loading FadeOut 時，Spinner 也要 FadeOut*/
+    .fadeOut .spinner{
+        animation: FadeOut 0.2s ease-out;
+    }
+
   .fadeOut{
-    animation:FadeOut 0.4s ease-in-out forwards;
+    animation:MoveOut 0.4s ease-in-out forwards;
   }
   .hideLoad{
     display: none;
   }
 
-  @keyframes FadeIn {
+  @keyframes MoveIn {
     0%{
         left: -120%;
     }
@@ -55,12 +61,28 @@
         left: 0%;
     }
   }
-  @keyframes FadeOut {
+  @keyframes MoveOut {
     0%{
         left:0%;
     }
     100%{
         left:100%;
+    }
+  }
+  @keyframes FadeOut {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+  }
+  @keyframes FadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
   }
   </style>
